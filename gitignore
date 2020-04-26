@@ -1,0 +1,10 @@
+#!/bin/bash
+
+while getopts ":t:" opt; do
+    case ${opt} in
+        #Use default gitignore settings if not argument is provided
+        : ) 
+            wget -O .gitignore https://www.gitignore.io/api/vim,linux,macos,python,pycharm,windows,visualstudio,visualstudiocode
+        ;;
+    esac
+done
